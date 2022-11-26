@@ -8,3 +8,32 @@ body {
     border-radius: 10px;
     box-shadow: 5px 5px 10px gray;
 }
+
+/* 
+#transition-area {
+    display: none;
+} */
+
+.Deposit {
+    background-color: slateblue;
+    margin: 0 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Widthraw {
+    background-color: lightsalmon;
+    margin: 0 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Balance {
+    background-color: orange;
+    margin: 0 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
