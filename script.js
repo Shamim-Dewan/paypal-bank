@@ -1,5 +1,6 @@
 document.getElementById("login").addEventListener("click", function () {
     document.getElementById("login-area").style.display = "none";
+    document.getElementById("transition-area").style.display = "block";
 });
 
 // deposit btn
