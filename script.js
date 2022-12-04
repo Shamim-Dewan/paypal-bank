@@ -3,6 +3,7 @@ document.getElementById("login").addEventListener("click", function () {
 });
 
 // deposit btn
+
 document.getElementById("depositBtn").addEventListener("click", function () {
     const depositAmount = document.getElementById("depositAmount").value;
     const depositNumber = parseFloat(depositAmount);
@@ -12,8 +13,13 @@ document.getElementById("depositBtn").addEventListener("click", function () {
     const totalDeposit = currentDepositNumber + depositNumber;
 
     document.getElementById("currentDeposit").innerText = totalDeposit;
-    document.getElementById("depositAmount").value = "";
 
+    const currentBalance = document.getElementById("currentBalance").innerText;
+    const currentBalanceNum = parseFloat(currentBalance);
+    const totalBalance = currentBalanceNum + depositNumber;
+    document.getElementById("currentBalance").innerText = totalBalance;
+    const totalNum = parseFloat(totalBalance);
+    document.getElementById("depositAmount").value = "";
 });
 
 // widthraw btn
@@ -21,12 +27,18 @@ document.getElementById("depositBtn").addEventListener("click", function () {
 document.getElementById("widthrawBtn").addEventListener("click", function () {
     const widthrawAmount = document.getElementById("widthrawAmount").value;
     const widthrawNumber = parseFloat(widthrawAmount);
+    console.log(widthrawNumber);
 
     const currentWidthraw = document.getElementById("currentWidthraw").innerText;
     const currentWidthrawNumber = parseFloat(currentWidthraw);
     const totalWidthraw = currentWidthrawNumber + widthrawNumber;
 
     document.getElementById("currentWidthraw").innerText = totalWidthraw;
+
+    const currentBalance = document.getElementById("currentBalance").innerText;
+    const currentBalanceNum = parseFloat(currentBalance);
+    const totalBalance = currentBalanceNum - widthrawNumber;
+    document.getElementById("currentBalance").innerText = totalBalance;
+    const totalNum = parseFloat(totalBalance);
     document.getElementById("widthrawAmount").value = "";
 });
-
