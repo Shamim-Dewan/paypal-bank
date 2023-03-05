@@ -18,11 +18,22 @@ document.getElementById("login").addEventListener("click", function () {
 // deposit btn
 
 document.getElementById("depositBtn").addEventListener("click", function () {
-    const depositAmount = document.getElementById("depositAmount").value;
-    const depositNumber = parseFloat(depositAmount);
+    const depositAmount = document.getElementById("depositAmount");
+    const depositNumber = parseFloat(depositAmount.value);
     // condition valid number if take input type text
     if (isNaN(depositNumber)) {
         alert('please provide a valid number for diposit');
+        document.getElementById("depositAmount").value = "";
+        return;
+    }
+    if(depositNumber < 1){
+        alert("Please enter a positve value atleast 1");
+        const currentDeposit = document.getElementById("currentDeposit");
+        const currentDepositNumber = parseFloat(currentDeposit.innerText);
+        const totalDeposit = currentDepositNumber;
+    
+        document.getElementById("currentDeposit").innerText = totalDeposit;
+        document.getElementById("depositAmount").value = "";
         return;
     }
     // display deposit
@@ -43,8 +54,24 @@ document.getElementById("depositBtn").addEventListener("click", function () {
 // widthraw btn
 
 document.getElementById("widthrawBtn").addEventListener("click", function () {
-    const widthrawAmount = document.getElementById("widthrawAmount").value;
-    const widthrawNumber = parseFloat(widthrawAmount);
+    const widthrawAmount = document.getElementById("widthrawAmount");
+    const widthrawNumber = parseFloat(widthrawAmount.value);
+// added condition
+    if (isNaN(widthrawNumber)) {
+        alert('please provide a valid number for diposit');
+        document.getElementById("widthrawAmount").value = "";
+        return;
+    }
+    if(widthrawNumber < 1){
+        alert("Please enter a positve value atleast 1");
+        const currentWidthraw = document.getElementById("currentWidthraw");
+        const currentWidthrawNumber = parseFloat(currentWidthraw.innerText);
+        const totalWidthraw = currentWidthrawNumber;
+    
+        document.getElementById("currentWidthraw").innerText = totalWidthraw;
+        document.getElementById("widthrawAmount").value = "";
+        return;
+    }
 // display widthraw
     const currentWidthraw = document.getElementById("currentWidthraw");
     const currentWidthrawNumber = parseFloat(currentWidthraw.innerText);
