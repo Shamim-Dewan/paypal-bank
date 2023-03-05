@@ -1,0 +1,43 @@
+body {
+    padding: 100px;
+}
+
+.submit-area {
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+
+#transition-area {
+    display: none;
+}
+
+.Deposit {
+    background-color: slateblue;
+    margin: 0 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Widthraw {
+    background-color: lightsalmon;
+    margin: 0 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Balance {
+    background-color: orange;
+    margin: 0 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+}
